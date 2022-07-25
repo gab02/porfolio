@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: text;
+  src: url(./assets/fonts/Gotham-Font/Gotham-Light.otf);
+}
+
+@font-face {
+  font-family: text1;
+  src: url(./assets/fonts/Gotham-Font/Gotham-Black.otf);
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(244, 244, 252);  }
+ .flex-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+   padding: 1em 0.5em;
+   animation-duration: 0.5s;
+ }

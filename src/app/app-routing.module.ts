@@ -1,10 +1,25 @@
+import { NarutoHomeModule } from './pages/naruto/naruto-home/naruto-home.module';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { NgwWowModule } from 'ngx-wow';
 
-const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'naruto',
+    loadChildren: () =>
+      import('./pages/naruto/naruto-home/naruto-home.module').then(
+        (m) => m.NarutoHomeModule
+      ),
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
