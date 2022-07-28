@@ -8,6 +8,10 @@
   font-family: text1;
   src: url(./assets/fonts/Gotham-Font/Gotham-Black.otf);
 }
+@font-face {
+  font-family: text2;
+  src: url(./assets/fonts/Gotham-Font/Gotham-XLightItalic.otf);
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: rgb(244, 244, 252);  }
  .flex-container {

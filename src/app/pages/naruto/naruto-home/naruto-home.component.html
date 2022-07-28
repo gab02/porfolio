@@ -8,22 +8,48 @@
   <div class="row">
     <div class="col-md-3 " *ngFor=" let item of Naruto">
       <div style="padding:0.3em ;">
-        <mat-card style="width: 80%; height:100%; background-color: rgba(175, 171, 166, 0.2);">
+        <mat-card style="width: 100%; height:100%; background-color: rgba(175, 171, 166, 0.2);">
           <mat-card-header>
-            <mat-card-title class="flex-container" class="neonText"> {{item.name}} </mat-card-title>
+            <mat-card-title class="flex-container" style="font-family: text1 ;" class="neonText"> {{item.name}}
+            </mat-card-title>
           </mat-card-header>
           <mat-card-subtitle>
             <img src="../../../../assets/images/naruto/{{item.photoName}}.png"
               style="border-radius: 10px ;  width: 100%; height: 223px; z-index:50; position: relative;" />
           </mat-card-subtitle>
-          <mat-card style="margin-top: -20%; background-color: rgb(195, 112, 10); position: relative;">
+          <mat-card
+            style="margin-top: -20%; height: 450px; background-image:linear-gradient(#da7e05, rgba(243, 131, 25, 0.872)); position: relative;">
             <div style="margin-top:20%;">
               {{item.text}}
             </div>
-            <div style="padding: 0.5em;">
-              <mat-card-footer style="background-color: rgb(185, 144, 93); border-radius: 10px;">
-                <div style="padding:0.5em ;" *ngFor="let itemAtributtes of item.estilos">
-                  °{{itemAtributtes.estilo}}
+            <div style="padding: 0.5em; width: 100%; position: absolute;
+  bottom: 0;
+  left: 0;">
+              <mat-card-footer
+                style="background-image:linear-gradient(#da7e05, rgba(168, 88, 12, 0.872)); border-radius: 10px;">
+                <div style="padding:0.5em ;">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4 style="text-align: center;"> Estilo</h4>
+
+                      <ul>
+                        <li *ngFor="let itemAtributtes of item.estilos">{{itemAtributtes.estilo}}</li>
+                      </ul>
+
+                    </div>
+
+                  </div>
+                  <div class="row">
+
+                    <div class="col-md-12">
+                      <h4 style="text-align: center;"> Poder</h4>
+                      <ul>
+                        <li>DEF - {{item.def}}</li>
+                        <li>ATK - {{item.pow}}</li>
+
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </mat-card-footer>
             </div>
@@ -34,5 +60,5 @@
 
     </div>
   </div>
-  <button>amor</button>
+  <button (click)="openDialog()">amor</button>
 </div>

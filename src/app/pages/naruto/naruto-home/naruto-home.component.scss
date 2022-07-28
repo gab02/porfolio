@@ -1,63 +1,43 @@
 .background {
-  font-family: text;
+  font-family: text1;
   background-image:
     linear-gradient(rgb(218, 126, 5), rgba(243, 131, 25, 0.872))
 
 }
 .neonText {
-  color: #fff;
+  color: rgb(65, 46, 3);
   text-shadow:
-    0 0 7px #fff,
-    0 0 10px #fff,
-    0 0 21px #fff,
-    0 0 42px #bc13fe,
-    0 0 82px #bc13fe,
-    0 0 92px #bc13fe,
-    0 0 102px #bc13fe,
-    0 0 151px #bc13fe;
+    0 0 7px rgb(228, 227, 217),
+    0 0 10px rgb(220, 220, 182),
+    0 0 21px rgb(194, 218, 43),
+    0 0 42px #d9a153,
+    0 0 82px #d9a153,
+    0 0 92px #d9a153,
+    0 0 102px #c17a15,
+    0 0 151px #c17a15;
 }
-button {
-    position: relative;
-    cursor: pointer;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-    padding: 1.5rem 4.5rem;
-    font-size: 3.5em;
-    background: transparent;
-    border: 2px solid #ffe4f3;
-    border-radius: 1rem;
-    color: #ffeff7;
-
-    -webkit-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
-    -moz-box-shadow: 0px 0px 44px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
-    box-shadow: inset 0px 0px 20px 1px rgba(248, 74, 167, 1), 0px 0px 20px 1px rgba(248, 74, 167, 1);
-    text-shadow: 0 0 0.125em rgba(248, 74, 167, 1);
+mat-card {
+  background: #fff;
+  transform: perspective(1px) translateZ(0);
+  color: black;
+  transition: 0.4s;
+    font-family: text2;
 }
-
-
-
-button:hover {
-    transition: 0.2s;
-    transform: scale(1.1);
-    background-color: #f84aa7;
-    border: 0;
+h4{
+    font-family: text1;
+}
+mat-card::before {
+  background: rgb(255, 90, 20);
+  clip-path: inset(0 100% 0 0);
+  opacity: 1;
+  transition: 0.4s;
 }
 
-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #f84aa7;
-    border-radius: 1rem;
-    filter: blur(2em);
-    opacity: 0;
-    transition: opacity linear 0.1s;
-    z-index: -1;
+mat-card:hover::before {
+  clip-path: inset(0 0 0 0);
 }
 
-button:hover::after {
-    opacity: 1;
+mat-card:hover {
+  color: white;
+  box-shadow: 0 0 0 10px rgba(250, 250, 250, 0.1)
 }
