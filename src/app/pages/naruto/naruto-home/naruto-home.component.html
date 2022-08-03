@@ -1,12 +1,31 @@
 <div class="background" style="width: 100%">
+
   <div style="padding: 0.5em">
     <img class="flex-container" src="../../../../assets/images/naruto-logo.png" width="250px" height="120px">
   </div>
 </div>
-<div style="padding: 1em;">
-
+<div style="padding: 1em; ">
+  <mat-card style="border-radius: 50%; width: 50px; height: 50px; position:fixed;
+    z-index:50;
+        left:90%;
+       " class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
+    (mouseover)="isOver = true" (mouseleave)="isOver = false">
+    <i class="material-icons" *ngIf="!openMenu">menu</i>
+    <i class="material-icons" *ngIf="openMenu">close</i>
+  </mat-card>
+  <br><br>
+  <br>
+  <mat-card style="border-radius: 50%; width: 50px; height: 50px; position:fixed;
+    z-index:50;
+        left:90%;
+       " class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
+    (mouseover)="isOver = true" (mouseleave)="isOver = false">
+    <i class="material-icons" *ngIf="!openMenu">menu</i>
+    <i class="material-icons" *ngIf="openMenu">close</i>
+  </mat-card>
   <div class="row">
     <div class="col-md-3 " *ngFor=" let item of Naruto">
+
       <div style="padding:0.3em ;">
         <mat-card style="width: 100%; height:100%; background-color: rgba(175, 171, 166, 0.2);">
           <mat-card-header>
@@ -21,6 +40,11 @@
             style="margin-top: -20%; height: 450px; background-image:linear-gradient(#da7e05, rgba(243, 131, 25, 0.872)); position: relative;">
             <div style="margin-top:20%;">
               {{item.text}}
+            </div>
+            <div style="padding: 0.5em;">
+              <button style="background-color: #000000;
+  border-radius: 5px;
+  width: 100%;" mat-stroked-button color="accent">Selecionar para batalha</button>
             </div>
             <div style="padding: 0.5em; width: 100%; position: absolute;
   bottom: 0;
