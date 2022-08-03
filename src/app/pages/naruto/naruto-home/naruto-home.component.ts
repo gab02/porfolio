@@ -14,7 +14,9 @@ export interface DialogData {
   styleUrls: ['./naruto-home.component.scss'],
 })
 export class NarutoHomeComponent implements OnInit {
-  constructor(public loaderService: LoaderService, public dialog: MatDialog) {}
+  isOver = false;
+  public openMenu: boolean = false;
+
   Naruto = [
     {
       name: 'Naruto Uzumaki',
@@ -82,6 +84,8 @@ export class NarutoHomeComponent implements OnInit {
       def: '100',
     },
   ];
+  constructor(public loaderService: LoaderService, public dialog: MatDialog) {}
+
   ngOnInit(): void {
     console.log('inicio');
   }
