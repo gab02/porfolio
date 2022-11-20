@@ -1,5 +1,7 @@
-<div class="background">
-  <br><br><br><br><br><br><br>
-
-  a
+<div style="padding: 20px; position: relative;">
+<p-dock [model]="dockBasicItems" position="bottom" >
+  <ng-template pTemplate="item" let-item>
+    <img [src]="item.icon" [alt]="item.label" width="100%">
+  </ng-template>
+</p-dock>
 </div>

@@ -84,6 +84,8 @@ export class NarutoHomeComponent implements OnInit {
       def: '100',
     },
   ];
+  firstHeroe: '';
+  secondHeroe: '';
   constructor(public loaderService: LoaderService, public dialog: MatDialog) {}
 
   ngOnInit(): void {
@@ -99,6 +101,17 @@ export class NarutoHomeComponent implements OnInit {
     this.dialog.open(DialogElementsExampleDialog, {
       data: { photoName: name, name: name1 },
     });
+  }
+  selectHeroe(image) {
+    //case firstHeroes dont preenchited
+    if (this.firstHeroe === undefined) {
+      this.firstHeroe = image;
+      return;
+    } else {
+      this.secondHeroe = image;
+    }
+    console.log(this.secondHeroe);
+    console.log(this.firstHeroe);
   }
 }
 

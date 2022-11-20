@@ -1,4 +1,4 @@
-<div class="container" style="padding: 1em;">
+<!-- <div class="container" style="padding: 1em;">
   <mat-card style="background-color: rgba(7, 3, 135, 0.693)">
     <div class="row">
       <div class="col-md-2">
@@ -24,4 +24,26 @@
       </div>
     </div>
   </mat-card>
+</div> -->
+<p-toolbar [styleClass]="'prime-toolbar'">
+  <div class="p-toolbar-group-left">
+
+  </div>
+
+  <div class="p-toolbar-group-right">
+  <div class="flex-container" (click)="redirectTo('naruto-home')">
+      <button mat-fab style="background-color: #f2a30b;" >
+      <img src="../../../../assets/images/kunai.png" style="width: 30px; height:30px"></button>
 </div>
+  <div class="flex-container">
+
+  <button mat-fab style="background-color: #b9a786;">
+    <img src="../../../../assets/images/egipcia.png" style="width: 30px; height:30px"></button>
+</div>
+      <div class="flex-container">
+
+    <button mat-fab style="background-color: #f2ebde;">
+      <img src="../../../../assets/images/question.png" style="width: 30px; height:30px"></button> </div>
+      </div>
+</p-toolbar>
+

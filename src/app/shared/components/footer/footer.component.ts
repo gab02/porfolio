@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-footer',
@@ -6,7 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent implements OnInit {
+  dockBasicItems: MenuItem[];
+
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.dockBasicItems = [
+      {
+        label: 'Instagram',
+        icon: '../../../../assets/images/instagram.png',
+      },
+      {
+        label: 'Linkedin',
+        icon: '../../../../assets/images/linkedin.png',
+      },
+      {
+        label: 'Github',
+        icon: '../../../../assets/images/git.png',
+      },
+    ];
+  }
 }

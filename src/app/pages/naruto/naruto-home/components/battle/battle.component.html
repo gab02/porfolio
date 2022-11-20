@@ -1,1 +1,12 @@
-<p>battle works!</p>
+<img class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
+  (mouseover)="isOver = true" (mouseleave)="isOver = false" src="../../../../assets/images/naruto/{{firstHeroe}}.png"
+  style=" border-radius: 50%; width: 50px; height: 50px; position:fixed;
+    z-index:50;
+        left:90%;border-radius: 50%;  width: 50px; height: 50px;" />
+<br><br>
+<br>
+<img class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
+  (mouseover)="isOver = true" (mouseleave)="isOver = false" src="../../../../assets/images/naruto/{{secondHeroe}}.png"
+  style=" border-radius: 50%; width: 50px; height: 50px; position:fixed;
+    z-index:50;
+        left:90%;border-radius: 50%;  width: 50px; height: 50px;" />

@@ -13,7 +13,11 @@ import {
 import { BattleComponent } from './components/battle/battle.component';
 
 @NgModule({
-  declarations: [NarutoHomeComponent, DialogElementsExampleDialog, BattleComponent],
+  declarations: [
+    NarutoHomeComponent,
+    DialogElementsExampleDialog,
+    BattleComponent,
+  ],
   imports: [
     CommonModule,
     MatCardModule,

@@ -5,29 +5,13 @@
   </div>
 </div>
 <div style="padding: 1em; ">
-  <mat-card style="border-radius: 50%; width: 50px; height: 50px; position:fixed;
-    z-index:50;
-        left:90%;
-       " class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
-    (mouseover)="isOver = true" (mouseleave)="isOver = false">
-    <i class="material-icons" *ngIf="!openMenu">menu</i>
-    <i class="material-icons" *ngIf="openMenu">close</i>
-  </mat-card>
-  <br><br>
-  <br>
-  <mat-card style="border-radius: 50%; width: 50px; height: 50px; position:fixed;
-    z-index:50;
-        left:90%;
-       " class="menu-button" [class.mat-elevation-z2]="!isOver" [class.mat-elevation-z8]="isOver"
-    (mouseover)="isOver = true" (mouseleave)="isOver = false">
-    <i class="material-icons" *ngIf="!openMenu">menu</i>
-    <i class="material-icons" *ngIf="openMenu">close</i>
-  </mat-card>
+  <app-battle [firstHeroe]="firstHeroe" [secondHeroe]="secondHeroe"></app-battle>
   <div class="row">
     <div class="col-md-3 " *ngFor=" let item of Naruto">
 
       <div style="padding:0.3em ;">
-        <mat-card style="width: 100%; height:100%; background-color: rgba(175, 171, 166, 0.2);">
+        <mat-card (click)="selectHeroe(item.photoName)"
+          style="width: 100%; height:100%; background-color: rgba(175, 171, 166, 0.2);">
           <mat-card-header>
             <mat-card-title class="flex-container" style="font-family: text1 ;" class="neonText"> {{item.name}}
             </mat-card-title>
